@@ -1,3 +1,6 @@
+ZADANIE 2.2 (insertsort)
+Zaimplementować algorytm sortowania przez wstawianie.
+
 ZADANIE 2.3 (bubblesort)
 Zaimplementować algorytm sortowania bąbelkowego.
 

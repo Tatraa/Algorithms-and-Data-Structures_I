@@ -42,7 +42,7 @@ public:
             return *this;
         }else{
             msize = other.msize;
-            last = other.msize;
+            last = other.last;
             delete[] tab;
             tab = nullptr;
             if(msize > 0)

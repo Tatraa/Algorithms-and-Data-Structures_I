@@ -8,7 +8,7 @@ TARGET1 = singlelist.out
 .PHONY: all
 all:$(TARGET1)
 
-%.o : %.c++ Makefile
+%.o : %.cpp Makefile
 	$(CC) $(CFLAGS) -c $< -o $@
 
 $(TARGET1) : $(OBJECTS1)

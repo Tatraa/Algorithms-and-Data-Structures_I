@@ -10,8 +10,8 @@ struct SingleNode
     T value;
     int priority;
     SingleNode *next;
-    SingleNode() : value(T()),priority(1), next(nullptr) {}
-    SingleNode(const T& item, const int priority,SingleNode *ptr=nullptr) : value(item), priority(priority),next(ptr) {}
+    SingleNode() : value(T()), priority(1), next(nullptr) {}
+    SingleNode(const T& item, const int priority, SingleNode *ptr=nullptr) : value(item), priority(priority), next(ptr) {}
     ~SingleNode() {}
 };
 

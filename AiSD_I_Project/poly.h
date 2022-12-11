@@ -11,15 +11,36 @@ class Polynomial {
     int n;
 public:
 
-    Polynomial();
+    Polynomial() {
+        n = 1;
+        coefficients = new T[n];
+    }
 
-    explicit Polynomial(int _n);
+    Polynomial(int _n) : n(_n) {
+        coefficients = new T[n + 1];
+        for (int i = 0; i < n + 1; ++i) {
+            coefficients[i] = T();
+        }
+    }
 
-    Polynomial(T *_coefficients, int _n);
+    Polynomial(T *_coefficients, int _n) : n(_n) {
+        coefficients = new T[n + 1];
+        for (int i = 0; i < n + 1; ++i) {
+            coefficients[i] = _coefficients[i];
+        }
+    }
 
-    Polynomial(const Polynomial &other);
+    Polynomial(const Polynomial &other) : n(other.n){
+        if (this != &other) {
+            coefficients = new T[n + 1];
+            std::copy(other.coefficients, other.coefficients + n + 1, coefficients);
+        }
+    }
 
-    ~Polynomial();
+    ~Polynomial() {
+        n = 0;
+        delete[] coefficients;
+    }
 
     Polynomial &operator=(const Polynomial &other) {
         if (this != &other) {
@@ -180,41 +201,5 @@ public:
         std::cout << std::endl;
     }
 };
-
-template <typename T>
-Polynomial<T>::Polynomial() {
-    n = 1;
-    coefficients = new T[n];
-}
-
-template <typename T>
-Polynomial<T>::Polynomial(int _n) : n(_n) {
-    coefficients = new T[n + 1];
-    for (int i = 0; i < n + 1; ++i) {
-        coefficients[i] = T();
-    }
-}
-
-template <typename T>
-Polynomial<T>::Polynomial(T *_coefficients, int _n) : n(_n) {
-    coefficients = new T[n + 1];
-    for (int i = 0; i < n + 1; ++i) {
-        coefficients[i] = _coefficients[i];
-    }
-}
-
-template <typename T>
-Polynomial<T>::Polynomial(const Polynomial &other) : n(other.n){
-    if (this != &other) {
-        coefficients = new T[n + 1];
-        std::copy(other.coefficients, other.coefficients + n + 1, coefficients);
-    }
-}
-
-template <typename T>
-Polynomial<T>::~Polynomial() {
-    n = 0;
-    delete[] coefficients;
-}
 
 #endif //EOF

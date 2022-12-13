@@ -15,4 +15,4 @@ Dodawanie, odejmowanie, mnożenie, wyświetlanie, sprawdzanie czy wielomian jest
 ### Złożoność obliczeniowa
 Stworzenie wielomianu zajmuje O(n) czasu.
 Do rozwiązywania Wielomianu posługujemy się algorytmem Hornera, który jest wydajniejszy i szybszy niż klasyczne rozwiązywanie układów wielomianowych.
-Zajmuje mu to O(n) czasu dla mnożenia, dodawania i mnożenia, a nie O(n^2) dla mnożenia jak klasyczny algorytm.
+Zajmuje mu to O(n) czasu dla dodawania i mnożenia, a nie O(n^2) dla mnożenia jak klasyczny algorytm iterowania przez każdy element wielomianów.

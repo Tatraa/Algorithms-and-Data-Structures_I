@@ -6,15 +6,11 @@ Implementacja wielomianów na bazie tablic (szablon, współczynniki typu T). Dz
 ### Jak uruchomić program:
 terminal: make, make run
 
-### Jak to działa?:
-Wielomiany w programie reprezentowane są za pomocą tablic dynamicznych (używających wskaźniki). Wielomiany możemy stworzyć na 3 sposoby:
-
-Stworzenie pustego;
-stworzenie wielomianu podając jego stopień;
-stworzenie wielomianu podając tablicę współczynników i stopnia wielomianu.
+### Co robi program?:
+Wielomiany w programie reprezentowane są za pomocą tablic dynamicznych (używających wskaźniki).
 
 Program pozwala nam na wykorzystanie operacji tak jak na wielomianach:
-Dodawanie, odejmowanie, mnożenie, porównanie oraz obliczanie wartości dla danego x
+Dodawanie, odejmowanie, mnożenie, wyświetlanie, sprawdzanie czy wielomian jest zerowy oraz obliczanie wartości dla danego x.
 
 ### Złożoność obliczeniowa
 Stworzenie wielomianu zajmuje O(n) czasu.

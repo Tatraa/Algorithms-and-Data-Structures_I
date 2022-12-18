@@ -85,7 +85,14 @@ public:
 
     // Metody bezpośrednio odwołujące się do node.
     // Mogą działać na poddrzewie.
-    void clear(BSTNode<T> *node) { }
+    void clear(BSTNode<T> *node) 
+    {
+        if(node == nullptr) return;
+
+        clear(node -> left);
+        clear(node -> right);
+        delete node;
+    }
     BSTNode<T> * insert(BSTNode<T> *node, const T& item); // zwraca nowy korzeń
     BSTNode<T> * search(BSTNode<T> *node, const T& item) const;
     void preorder(BSTNode<T> *node);

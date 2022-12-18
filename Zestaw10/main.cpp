@@ -25,4 +25,9 @@ int main()
     std::cout << "Liscie wyliczone metoda iteracyjna: \n";
     std::cout << tree.calc_leafs_iter(tree.root);
     std::cout << std::endl;
+    
+    std::cout << std::endl;
+    std::cout << "Wyczysczenie drzewa..." << std::endl;
+    tree.clear();
+    tree.display();
 }

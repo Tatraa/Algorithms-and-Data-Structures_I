@@ -42,13 +42,13 @@ void merge(T* L, int left, int right){
 }
 template <typename T>
 void mergesort(T* L, int left, int right){
-	if (left < right)
-    {
-        int mid = (left + right) / 2;
-        mergesort(L, left, mid);
-        mergesort(L, mid + 1, right);
-        merge(L, left, right);
-    }
+    	if (left < right)
+    	{
+        	int mid = (left + right) / 2;
+        	mergesort(L, left, mid);
+        	mergesort(L, mid + 1, right);
+        	merge(L, left, right);
+    	}
 } 
 
 int main(int argc, char *argv[]){
